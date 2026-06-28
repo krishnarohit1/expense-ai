@@ -1,0 +1,300 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+}
+
+html, body {
+  margin: 0;
+  min-height: 100%;
+  background: radial-gradient(circle at top, #f8f1ff 0%, #e5ddd5 40%, #eef3f8 100%);
+  color: #202c33;
+}
+
+body {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+header {
+  display: grid;
+  gap: 20px;
+  padding: 24px 0;
+}
+
+.hero {
+  display: grid;
+  gap: 14px;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(2rem, 3vw, 3.4rem);
+  line-height: 1.05;
+}
+
+.hero p {
+  margin: 0;
+  max-width: 760px;
+  color: #47515f;
+  font-size: 1.06rem;
+}
+
+.panel {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 28px;
+  box-shadow: 0 18px 45px rgba(28, 40, 84, 0.12);
+  border: 1px solid rgba(78, 91, 132, 0.08);
+}
+
+.chat-panel {
+  display: grid;
+  gap: 12px;
+  padding: 18px;
+}
+
+.chat-header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.landing {
+  padding: 28px;
+  margin: 24px 0;
+}
+
+.landing h2,
+.next-step h2 {
+  margin: 0 0 12px;
+}
+
+.landing p,
+.next-step p {
+  margin: 0 0 16px;
+  color: #47515f;
+  line-height: 1.7;
+}
+
+.landing ul,
+.next-step ul {
+  padding-left: 22px;
+  margin: 0;
+  color: #3b4a5a;
+}
+
+.landing li,
+.next-step li {
+  margin-bottom: 10px;
+}
+
+.whatsapp-button,
+.secondary {
+  padding: 14px 22px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.98rem;
+}
+
+.whatsapp-button {
+  background: linear-gradient(135deg, #1eb433, #25d366);
+  color: #ffffff;
+  box-shadow: 0 14px 24px rgba(37, 211, 102, 0.18);
+}
+
+.secondary {
+  background: #ffffff;
+  color: #1f2937;
+  border: 1px solid rgba(31, 41, 55, 0.12);
+}
+
+.whatsapp-button:hover,
+.secondary:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.02);
+}
+
+.whatsapp-button:hover,
+.secondary:hover {
+  filter: brightness(0.95);
+}
+
+.chat-subtitle {
+  color: #54656f;
+  font-size: 0.95rem;
+}
+
+.chat-history {
+  min-height: 420px;
+  max-height: 520px;
+  overflow-y: auto;
+  display: grid;
+  gap: 14px;
+  padding: 18px;
+  background: linear-gradient(180deg, #f9fafb 0%, #eef4fb 100%);
+  border-radius: 24px;
+  border: 1px solid rgba(37, 65, 102, 0.08);
+}
+
+.chat-message {
+  max-width: 85%;
+  padding: 16px 18px;
+  border-radius: 22px;
+  line-height: 1.6;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+}
+
+.chat-message.bot {
+  background: #ffffff;
+  border-top-left-radius: 6px;
+  justify-self: start;
+}
+
+.chat-message.user {
+  background: #dcf8c6;
+  justify-self: end;
+}
+
+.chat-input-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+}
+
+.whatsapp-button {
+  margin-top: 12px;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 999px;
+  background: #25d366;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.whatsapp-button:hover {
+  filter: brightness(0.94);
+}
+
+.chat-input-row input,
+.chat-input-row button {
+  padding: 14px 16px;
+  border-radius: 999px;
+  border: 1px solid #d1d5db;
+  font-size: 1rem;
+}
+
+.chat-input-row input {
+  min-width: 0;
+}
+
+.chat-input-row button {
+  background: #25d366;
+  color: #ffffff;
+  border: none;
+  width: 120px;
+}
+
+.chat-input-row button:hover {
+  filter: brightness(0.95);
+}
+
+#dashboard {
+  padding: 24px;
+}
+
+#dashboard h2 {
+  margin-top: 0;
+}
+
+#dashboard_summary {
+  margin-bottom: 16px;
+  color: #54656f;
+}
+
+#dashboard_expenses {
+  display: grid;
+  gap: 12px;
+}
+
+.expense-card {
+  padding: 14px 16px;
+  border-radius: 16px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+
+.expense-card strong {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.expense-card .meta {
+  color: #475569;
+  font-size: 0.95rem;
+}
+
+.expense-card .desc {
+  color: #64748b;
+  margin-top: 10px;
+}
+
+.status {
+  min-height: 1.5rem;
+  color: #202c33;
+  padding: 4px 0;
+}
+
+.status-error {
+  color: #be123c;
+}
+
+.page-footer {
+  margin: 24px 0 0;
+  padding: 20px;
+  color: #47515f;
+  text-align: center;
+  font-size: 0.96rem;
+}
+
+.hidden {
+  display: none !important;
+}
+
+@media (max-width: 720px) {
+  body {
+    padding: 16px;
+  }
+
+  header {
+    flex-direction: column;
+  }
+
+  .chat-input-row {
+    grid-template-columns: 1fr;
+  }
+
+  .chat-input-row button {
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 780px) {
+  header {
+    flex-direction: column;
+  }
+
+  .expense-card {
+    flex-direction: column;
+  }
+}

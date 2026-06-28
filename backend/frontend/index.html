@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Expense AI Chat</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header>
+    <div class="hero">
+      <h1>Expense AI WhatsApp Bot</h1>
+      <p>Turn this website into a WhatsApp bot entry point. Visitors can click to open WhatsApp, register, login, and manage expenses using chat commands.</p>
+      <div class="button-row">
+        <button id="btn_whatsapp" class="whatsapp-button">Add bot on WhatsApp</button>
+        <button id="btn_share" class="secondary">Share this link</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="landing panel">
+    <h2>Quick start</h2>
+    <p>Use the button above to open WhatsApp and begin the bot flow. The bot supports:</p>
+    <ul>
+      <li>Registering a new account</li>
+      <li>Logging in securely</li>
+      <li>Creating expenses</li>
+      <li>Listing expenses and viewing the dashboard</li>
+    </ul>
+  </section>
+
+  <section class="chat-panel panel">
+    <div class="chat-header">
+      <div><strong>Expense AI Bot</strong></div>
+      <div class="chat-subtitle">Type <code>help</code> to see commands.</div>
+    </div>
+    <div id="chat_history" class="chat-history"></div>
+    <div class="chat-input-row">
+      <input id="chat_input" placeholder="Type a command, e.g. login email password" autocomplete="off" />
+      <button id="btn_send">Send</button>
+    </div>
+  </section>
+
+  <main id="dashboard" class="hidden panel">
+    <h2>Dashboard</h2>
+    <div id="dashboard_summary">Use the command <code>show dashboard</code> after login.</div>
+    <div id="dashboard_expenses"></div>
+  </main>
+
+  <section class="next-step panel">
+    <h2>Next step</h2>
+    <p>If you want this bot to work from a public website, deploy the backend and frontend to a live host, then set the WhatsApp share link to your hosted URL.</p>
+    <ul>
+      <li>Deploy the app to a public server</li>
+      <li>Update `WHATSAPP_NUMBER` in <code>backend/frontend/app.js</code></li>
+      <li>Use the shared page as the bot install entry point</li>
+    </ul>
+  </section>
+
+  <footer class="page-footer">
+    <p>Expense AI Chat Bot — ready for WhatsApp onboarding and expense tracking.</p>
+  </footer>
+
+  <script src="/app.js"></script>
+</body>
+</html>
